@@ -1,0 +1,128 @@
+@import "tailwindcss";
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222 84% 5%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222 84% 5%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 84% 5%;
+
+  --primary: 263 70% 50%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222 84% 5%;
+
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+
+  --accent: 191 95% 50%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 263 70% 50%;
+
+  --radius: 0.75rem;
+  /* Custom portfolio colors - Light Mode */
+  --gradient-primary: linear-gradient(
+    135deg,
+    hsl(263 70% 50%),
+    hsl(291 64% 42%)
+  );
+  --gradient-secondary: linear-gradient(
+    135deg,
+    hsl(191 95% 50%),
+    hsl(263 70% 50%)
+  );
+  --gradient-accent: linear-gradient(
+    135deg,
+    hsl(33 100% 50%),
+    hsl(191 95% 50%)
+  );
+  --glow-primary: 0 0 40px hsl(263 70% 50% / 0.2);
+  --glow-accent: 0 0 30px hsl(191 95% 50% / 0.2);
+  --code-bg: 210 40% 98%;
+  --code-border: 214 32% 91%;
+
+  --sidebar-background: 0 0% 98%;
+
+  --sidebar-foreground: 240 5.3% 26.1%;
+
+  --sidebar-primary: 240 5.9% 10%;
+
+  --sidebar-primary-foreground: 0 0% 98%;
+
+  --sidebar-accent: 240 4.8% 95.9%;
+
+  --sidebar-accent-foreground: 240 5.9% 10%;
+
+  --sidebar-border: 220 13% 91%;
+
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+.dark {
+  --background: 222 84% 5%;
+  --foreground: 210 40% 98%;
+
+  --card: 222 84% 7%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 222 84% 7%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 263 70% 65%;
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 217 32% 18%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 217 32% 15%;
+  --muted-foreground: 215 20% 65%;
+
+  --accent: 191 95% 65%;
+  --accent-foreground: 222 84% 5%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217 32% 17%;
+  --input: 217 32% 17%;
+  --ring: 263 70% 65%;
+
+  /* Custom portfolio colors - Dark Mode */
+  --gradient-primary: linear-gradient(
+    135deg,
+    hsl(263 70% 65%),
+    hsl(291 64% 42%)
+  );
+  --gradient-secondary: linear-gradient(
+    135deg,
+    hsl(191 95% 65%),
+    hsl(263 70% 65%)
+  );
+  --gradient-accent: linear-gradient(
+    135deg,
+    hsl(33 100% 67%),
+    hsl(191 95% 65%)
+  );
+  --glow-primary: 0 0 40px hsl(263 70% 65% / 0.3);
+  --glow-accent: 0 0 30px hsl(191 95% 65% / 0.3);
+  --code-bg: 217 32% 12%;
+  --code-border: 217 32% 20%;
+
+  --sidebar-background: 240 5% 10%;
+  --sidebar-foreground: 240 5% 96%;
+  --sidebar-primary: 224 76% 48%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 240 4% 16%;
+  --sidebar-accent-foreground: 240 5% 96%;
+  --sidebar-border: 240 4% 16%;
+  --sidebar-ring: 217 91% 60%;
+}
