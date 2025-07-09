@@ -2,14 +2,17 @@ import React from "react";
 import { Github, Linkedin, Mail, Download, ArrowDown } from "lucide-react";
 import { Badge } from "../ui/Badge";
 import { Button } from "../ui/Button";
+import { mockSocials } from "../../data/mockSocials";
 
 function Hero() {
+  const socialLinks = mockSocials;
+
   const scrollToNext = () => {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section className="min-h-screen relative overflow-hidden flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <section className="min-h-screen relative overflow-hidden flex items-center justify-center bg-background from-slate-900 via-purple-900 to-slate-900">
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-teal-600/20 animate-pulse" />
 
@@ -35,10 +38,7 @@ function Hero() {
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div className="animate-fade-in">
-          <Badge
-            variant="secondary"
-            className="mb-6 bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
-          >
+          <Badge variant="secondary" className="mb-6 bg-backround">
             MERN Stack Developer
           </Badge>
         </div>
@@ -47,7 +47,7 @@ function Hero() {
           Full Stack Developer
         </h1>
 
-        <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in">
+        <p className="text-xl md:text-2xl  mb-8 max-w-2xl mx-auto animate-fade-in">
           Building scalable web applications with MongoDB, Express.js, React,
           and Node.js. Passionate about creating seamless user experiences and
           robust backend solutions.
@@ -56,50 +56,47 @@ function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in">
           <Button
             size="lg"
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700  shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
           >
             <Mail className="mr-2 h-5 w-5" />
-            Get In Touch
+            <a
+              href="
+            #contact"
+            >
+              Get In Touch
+            </a>
           </Button>
           <Button
             variant="outline"
             size="lg"
-            className="border-purple-400 text-purple-400 hover:bg-purple-400/10 hover:border-purple-300 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            className="border-purple-400  hover:bg-purple-400/10 hover:border-purple-300 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
           >
             <Download className="mr-2 h-5 w-5" />
-            Download Resume
+            <a href="https://drive.google.com/file/d/1NgQm_bTx_UnggRcO6uJsiTwlNm6Qwp5U/view?usp=sharing">
+              Download Resume
+            </a>
           </Button>
         </div>
 
         <div className="flex justify-center gap-6 mb-12 animate-fade-in">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-gray-400 hover:text-white hover:bg-gray-800 hover:shadow-lg transform hover:scale-110 transition-all duration-300"
-          >
-            <Github className="h-6 w-6" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-gray-400 hover:text-white hover:bg-gray-800 hover:shadow-lg transform hover:scale-110 transition-all duration-300"
-          >
-            <Linkedin className="h-6 w-6" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-gray-400 hover:text-white hover:bg-gray-800 hover:shadow-lg transform hover:scale-110 transition-all duration-300"
-          >
-            <Mail className="h-6 w-6" />
-          </Button>
+          {socialLinks.map((social, index) => (
+            <a
+              key={index}
+              href={social.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`  hover:  hover:shadow-lg transform hover:scale-110 transition-all duration-300`}
+            >
+              {social.icon}
+            </a>
+          ))}
         </div>
 
         <Button
           variant="ghost"
           size="icon"
           onClick={scrollToNext}
-          className="animate-bounce text-gray-400 hover:text-white hover:bg-gray-800 hover:shadow-lg transform hover:scale-110 transition-all duration-300"
+          className="animate-bounce  hover: hover:bg-gray-800 hover:shadow-lg transform hover:scale-110 transition-all duration-300"
         >
           <ArrowDown className="h-6 w-6" />
         </Button>

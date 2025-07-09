@@ -1,4 +1,6 @@
 @import "tailwindcss";
+
+/* Light mode variables */
 :root {
   --background: 0 0% 100%;
   --foreground: 222 84% 5%;
@@ -29,6 +31,7 @@
   --ring: 263 70% 50%;
 
   --radius: 0.75rem;
+
   /* Custom portfolio colors - Light Mode */
   --gradient-primary: linear-gradient(
     135deg,
@@ -51,22 +54,16 @@
   --code-border: 214 32% 91%;
 
   --sidebar-background: 0 0% 98%;
-
   --sidebar-foreground: 240 5.3% 26.1%;
-
   --sidebar-primary: 240 5.9% 10%;
-
   --sidebar-primary-foreground: 0 0% 98%;
-
   --sidebar-accent: 240 4.8% 95.9%;
-
   --sidebar-accent-foreground: 240 5.9% 10%;
-
   --sidebar-border: 220 13% 91%;
-
   --sidebar-ring: 217.2 91.2% 59.8%;
 }
 
+/* Dark mode overrides */
 .dark {
   --background: 222 84% 5%;
   --foreground: 210 40% 98%;
@@ -125,4 +122,225 @@
   --sidebar-accent-foreground: 240 5% 96%;
   --sidebar-border: 240 4% 16%;
   --sidebar-ring: 217 91% 60%;
+}
+
+/* Apply colors using CSS variables and Tailwind utilities */
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Additional utility classes using the CSS variables */
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.bg-gradient-secondary {
+  background: var(--gradient-secondary);
+}
+
+.bg-gradient-accent {
+  background: var(--gradient-accent);
+}
+
+.shadow-glow-primary {
+  box-shadow: var(--glow-primary);
+}
+
+.shadow-glow-accent {
+  box-shadow: var(--glow-accent);
+}
+
+.bg-code {
+  background-color: hsl(var(--code-bg));
+}
+
+.border-code {
+  border-color: hsl(var(--code-border));
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
+
+/* Selection styling */
+::selection {
+  background: hsl(var(--primary) / 0.2);
+  color: hsl(var(--primary-foreground));
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Typography enhancements */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: hsl(var(--primary) / 0.8);
+}
+
+/* Code styling */
+code {
+  background-color: hsl(var(--code-bg));
+  border: 1px solid hsl(var(--code-border));
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: hsl(var(--code-bg));
+  border: 1px solid hsl(var(--code-border));
+  border-radius: 8px;
+  padding: 1em;
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Card styling */
+.card {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 1.5em;
+  box-shadow: 0 2px 4px hsl(var(--foreground) / 0.1);
+}
+
+/* Button base styling */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 1em;
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: hsl(var(--primary-foreground));
+}
+
+.btn-primary:hover {
+  box-shadow: var(--glow-primary);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+.btn-secondary:hover {
+  background-color: hsl(var(--secondary) / 0.8);
+}
+
+/* Input styling */
+.input {
+  background-color: hsl(var(--input));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 0.5em 1em;
+  color: hsl(var(--foreground));
+  width: 100%;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: hsl(var(--ring));
+  box-shadow: 0 0 0 2px hsl(var(--ring) / 0.2);
+}
+
+/* Responsive design helpers */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Dark mode media query support */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
+    --card: 222 84% 7%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 84% 7%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 263 70% 65%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217 32% 18%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 32% 15%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 191 95% 65%;
+    --accent-foreground: 222 84% 5%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 263 70% 65%;
+    --gradient-primary: linear-gradient(135deg, hsl(263 70% 65%), hsl(291 64% 42%));
+    --gradient-secondary: linear-gradient(135deg, hsl(191 95% 65%), hsl(263 70% 65%));
+    --gradient-accent: linear-gradient(135deg, hsl(33 100% 67%), hsl(191 95% 65%));
+    --glow-primary: 0 0 40px hsl(263 70% 65% / 0.3);
+    --glow-accent: 0 0 30px hsl(191 95% 65% / 0.3);
+    --code-bg: 217 32% 12%;
+    --code-border: 217 32% 20%;
+  }
 }

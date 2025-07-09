@@ -7,9 +7,9 @@ export const Button = ({
   ...props 
 }) => {
   const variants = {
-    default: "bg-blue-600 hover:bg-blue-700 text-white",
+    default: "bg-blue-600 hover:bg-blue-700 ",
     outline: "border-2 border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20",
-    ghost: "hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300",
+    ghost: "",
   };
   
   const sizes = {

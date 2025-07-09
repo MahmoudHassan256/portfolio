@@ -15,7 +15,7 @@ export const mockProjects = [
     technologies: ["Java (Client-Server Architecture)"],
     githubUrl: "https://github.com/MahmoudHassan256/CPS-Project",
     liveUrl: "",
-    featured: false,
+    featured: true,
   },
   {
     title: "Epicure – Skills Academy Ltd.",
