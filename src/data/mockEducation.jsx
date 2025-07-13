@@ -32,4 +32,15 @@ export const mockEducation = [
       "Focused on inclusive and differentiated instruction in diverse classrooms",
     ],
   },
+  {
+    degree: "Full Stack Web Development Bootcamp",
+    school: "Tsofen & Moveo Skills",
+    location: "Tel Aviv, Israel",
+    period: "2022",
+    achievements: [
+      "Completed a 330-hour intensive training in React, Node.js, MongoDB, and web technologies",
+      "Gained hands-on experience in building responsive, full-stack applications",
+      "Collaborated with cross-functional teams following Agile and Git-based workflows",
+    ],
+  },
 ];
