@@ -22,17 +22,6 @@ export const mockEducation = [
     ],
   },
   {
-    degree: "Mathematics Education",
-    school: "Haifa University",
-    location: "Haifa, Israel",
-    period: "2024 – 2025",
-    achievements: [
-      "Specialized in teaching strategies for high school mathematics",
-      "Completed practicum in a local school integrating digital learning tools",
-      "Focused on inclusive and differentiated instruction in diverse classrooms",
-    ],
-  },
-  {
     degree: "Full Stack Web Development Bootcamp",
     school: "Tsofen & Moveo Skills",
     location: "Tel Aviv, Israel",
@@ -41,6 +30,17 @@ export const mockEducation = [
       "Completed a 330-hour intensive training in React, Node.js, MongoDB, and web technologies",
       "Gained hands-on experience in building responsive, full-stack applications",
       "Collaborated with cross-functional teams following Agile and Git-based workflows",
+    ],
+  },
+  {
+    degree: "Mathematics Education",
+    school: "Haifa University",
+    location: "Haifa, Israel",
+    period: "2024 – 2025",
+    achievements: [
+      "Specialized in teaching strategies for high school mathematics",
+      "Completed practicum in a local school integrating digital learning tools",
+      "Focused on inclusive and differentiated instruction in diverse classrooms",
     ],
   },
 ];
