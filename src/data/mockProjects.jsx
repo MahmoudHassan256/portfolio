@@ -6,7 +6,7 @@ export const mockProjects = [
     technologies: ["React", "Node.js", "MongoDB"],
     githubUrl: "https://github.com/MahmoudHassan256/FlightProject",
     liveUrl: "", // add URL if available
-    featured: false,
+    featured: true,
   },
   {
     title: "Parking Management System",
@@ -15,7 +15,7 @@ export const mockProjects = [
     technologies: ["Java (Client-Server Architecture)"],
     githubUrl: "https://github.com/MahmoudHassan256/CPS-Project",
     liveUrl: "",
-    featured: true,
+    featured: false,
   },
   {
     title: "Epicure – Skills Academy Ltd.",
@@ -24,7 +24,7 @@ export const mockProjects = [
     technologies: ["React", "TypeScript", "Node.js", "MongoDB"],
     githubUrl: "https://github.com/MahmoudHassan256/EpicureProject",
     liveUrl: "", // add URL if available
-    featured: false,
+    featured: true,
   },
   {
     title: "Platform 2D Game",
@@ -64,6 +64,6 @@ Designed with a scout-themed color scheme, responsive layout, and intuitive form
     ],
     githubUrl: "https://github.com/MahmoudHassan256/kabul-scout-hub",
     liveUrl: "", // add if available
-    featured: true,
+    featured: false,
   },
 ];
